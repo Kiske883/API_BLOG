@@ -1,12 +1,12 @@
 @URL = http://localhost:3000/api
 
-GET {{URL}}/clientes
+GET {{URL}}/authors
 
 ###
-GET {{URL}}/clientes/149
+GET {{URL}}/authors/3
 
 ###
-POST {{URL}}/clientes
+POST {{URL}}/authors
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 }
 
 ###
-PUT {{URL}}/clientes/149
+PUT {{URL}}/authors/3
 Content-Type: application/json
 
 {
@@ -38,4 +38,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{URL}}/clientes/149
+DELETE {{URL}}/authors/3

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\cursos\\UNIR\\Modulo5\\proyectos\\Practica08\\logs\\.04cac559b0ffd3b4bd22ded6a6121e95eaeefcc2-audit.json",
+    "files": [
+        {
+            "date": 1762440136700,
+            "name": "D:\\cursos\\UNIR\\Modulo5\\proyectos\\Practica08\\logs\\blogAPI_info_20251106.log",
+            "hash": "87e6d26e4a0d393f0473a596d64f0ef6db3b36dd04a6151d1afd0f1a55de48bd"
+        }
+    ],
+    "hashType": "sha256"
+}

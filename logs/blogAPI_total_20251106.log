@@ -78,3 +78,4 @@
 2025-11-06 18:06:27 [info] Entro en author.model.js getById pasandole undefined
 2025-11-06 18:06:48 [info] Server listening on port 3000
 2025-11-06 18:06:48 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:06:52 [info] Entro en author.model.js getById pasandole 3

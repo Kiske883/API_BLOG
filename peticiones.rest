@@ -1,0 +1,41 @@
+@URL = http://localhost:3000/api
+
+GET {{URL}}/clientes
+
+###
+GET {{URL}}/clientes/149
+
+###
+POST {{URL}}/clientes
+Content-Type: application/json
+
+{
+    "nombre": "Lluis",
+    "apellidos": "Alsina",
+    "direccion": "15 Helena Terrace",
+    "email": "lalsina883@gmail.com",
+    "edad": 50,
+    "genero": "M",
+    "cuota": "16.90",
+    "fecha_nacimiento": "1975-04-26",
+    "dni": "309632997g"
+}
+
+###
+PUT {{URL}}/clientes/149
+Content-Type: application/json
+
+{
+    "nombre": "Lluis2",
+    "apellidos": "Alsina2",
+    "direccion": "15 Helena Terrace",
+    "email": "lalsina883@gmail.com",
+    "edad": 50,
+    "genero": "M",
+    "cuota": "16.90",
+    "fecha_nacimiento": "1975-04-26",
+    "dni": "309632997g"
+}
+
+###
+DELETE {{URL}}/clientes/149

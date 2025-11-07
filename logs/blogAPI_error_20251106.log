@@ -36,3 +36,6 @@
     at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:600:14)
     at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:610:14)
     at processParams (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:664:3)
+2025-11-06 18:39:03 [error] ReferenceError: ClientesModel is not defined
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\authors.controller.js:30:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

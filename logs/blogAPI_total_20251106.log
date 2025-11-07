@@ -79,3 +79,24 @@
 2025-11-06 18:06:48 [info] Server listening on port 3000
 2025-11-06 18:06:48 [info] Conexión a la base de datos MySQL exitosa!
 2025-11-06 18:06:52 [info] Entro en author.model.js getById pasandole 3
+2025-11-06 18:28:42 [info] Server listening on port 3000
+2025-11-06 18:28:42 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:37:03 [info] Server listening on port 3000
+2025-11-06 18:37:03 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:38:37 [info] Server listening on port 3000
+2025-11-06 18:38:37 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:39:03 [error] ReferenceError: ClientesModel is not defined
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\authors.controller.js:30:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-06 18:39:32 [info] Server listening on port 3000
+2025-11-06 18:39:32 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:39:36 [info] Entro en author.model.js getById pasandole undefined
+2025-11-06 18:41:32 [info] Server listening on port 3000
+2025-11-06 18:41:32 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:41:41 [info] Entro en author.model.js getById pasandole 7
+2025-11-06 18:42:00 [info] Server listening on port 3000
+2025-11-06 18:42:00 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:42:47 [info] Server listening on port 3000
+2025-11-06 18:42:47 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-06 18:46:23 [info] Server listening on port 3000
+2025-11-06 18:46:23 [info] Conexión a la base de datos MySQL exitosa!

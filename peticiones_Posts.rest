@@ -1,0 +1,32 @@
+@URL = http://localhost:3000/api
+
+GET {{URL}}/authors
+
+###
+GET {{URL}}/authors?page=1&perPage=2
+
+###
+GET {{URL}}/authors/258
+
+###
+POST {{URL}}/authors
+Content-Type: application/json
+
+{
+    "nombre": "Lluis",
+    "email": "lalsina883@gmail.com",
+    "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
+}
+
+###
+PUT {{URL}}/authors/258
+Content-Type: application/json
+
+{
+    "nombre": "Lluis",
+    "email": "lalsina883@gmail.com",
+    "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
+}
+
+###
+DELETE {{URL}}/authors/8

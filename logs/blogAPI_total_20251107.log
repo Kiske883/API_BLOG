@@ -1,0 +1,48 @@
+2025-11-07 10:44:40 [info] Server listening on port 3000
+2025-11-07 10:44:40 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 10:45:02 [error] Not found: GET http://localhost:3000/favicon.ico
+2025-11-07 10:47:49 [info] Server listening on port 3000
+2025-11-07 10:47:49 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 10:47:54 [error] id no numerico
+2025-11-07 10:54:56 [info] Server listening on port 3000
+2025-11-07 10:54:56 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 10:59:09 [info] Server listening on port 3000
+2025-11-07 10:59:10 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:42:18 [info] Server listening on port 3000
+2025-11-07 11:42:18 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:44:39 [info] Server listening on port 3000
+2025-11-07 11:44:39 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:49:42 [info] Server listening on port 3000
+2025-11-07 11:49:42 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:53:28 [info] Server listening on port 3000
+2025-11-07 11:53:28 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:54:10 [info] Server listening on port 3000
+2025-11-07 11:54:10 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:54:44 [error] clienteId is not defined
+2025-11-07 11:54:44 [error] ReferenceError: clienteId is not defined
+    at updateById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\authors.controller.js:53:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 11:55:53 [error] clienteId is not defined
+2025-11-07 11:55:53 [error] ReferenceError: clienteId is not defined
+    at updateById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\authors.controller.js:53:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 11:57:00 [info] Server listening on port 3000
+2025-11-07 11:57:00 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:58:44 [info] Server listening on port 3000
+2025-11-07 11:58:44 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 11:59:42 [info] Server listening on port 3000
+2025-11-07 11:59:42 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:00:19 [error] El id : lluis no es numérico
+2025-11-07 12:00:28 [error] El id : 258 no localizado
+2025-11-07 12:00:47 [error] El id : Lluis no es numérico
+2025-11-07 12:00:52 [error] El id : 258 no localizado
+2025-11-07 12:01:09 [error] El id : 258 no localizado
+2025-11-07 12:01:15 [error] El id : Lluis no es numérico
+2025-11-07 12:01:21 [error] AuthorModel.delete is not a function
+2025-11-07 12:01:21 [error] TypeError: AuthorModel.delete is not a function
+    at deleteById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\authors.controller.js:75:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 12:02:26 [info] Server listening on port 3000
+2025-11-07 12:02:27 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:03:54 [info] Server listening on port 3000
+2025-11-07 12:03:54 [info] Conexión a la base de datos MySQL exitosa!

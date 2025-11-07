@@ -120,3 +120,5 @@
 2025-11-07 16:23:06 [info] Conexión a la base de datos MySQL exitosa!
 2025-11-07 16:26:42 [info] Server listening on port 3000
 2025-11-07 16:26:42 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:27:09 [error] El id : 258 no localizado
+2025-11-07 16:27:15 [error] El id : lluis no es numérico

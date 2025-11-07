@@ -26,3 +26,5 @@
     at AuthorModel.getById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\author.model.js:17:7)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async checkAuthorId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\authors.middlewares.js:13:20)
+2025-11-07 16:27:09 [error] El id : 258 no localizado
+2025-11-07 16:27:15 [error] El id : lluis no es numérico

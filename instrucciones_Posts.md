@@ -1,52 +1,48 @@
 ##############################
-##         API Authors      ##
+##         API Posts        ##
 ##############################
 
-## Recuperar todos los Authors
+## Recuperar todos los Posts
 Metodo : GET 
-URL : /api/authors
+URL : /api/Posts
 Headers : no
 Body: no
 
 Response: 
-- Array con todos lo Authors 
+- Array con todos lo Posts 
 
 ## Creación de un cliente
 Metodo : POST
-URL : /api/authors
+URL : /api/Posts
 Headers : no
-Body: { nombre, email, imagen }
+Body: { titulo, descripcion, categoria_id, imagen, created_at, updated_at, autor_id, categoria, Author.nombre, Author.email, Author.imagen }
 
 Response: 
-- Array con el author añadido
+- Array con el Posts añadido
 
-## Recuperar los datos de un author
+## Recuperar los datos de un Posts
 Metodo : GET
-URL : /api/authors/:id
+URL : /api/Posts/:id
 Headers : no
 Body: no 
 
 Response: 
-- Array con el author seleccionado
+- Array con el Posts seleccionado
 
-## Actualizar datos de un author
+## Actualizar datos de un Posts
 Metodo : PUT
-URL : /api/authors/:id
+URL : /api/Posts/:id
 Headers : no
-Body: { nombre, email, imagen }
+Body: { titulo, descripcion, categoria_id, imagen, autor_id }
 
 Response: 
-- Array con el author actualizado
+- Array con el Posts actualizado
 
-## eliminar un author
+## eliminar un Posts
 Metodo : DELETE
-URL : /api/authors/:id
+URL : /api/Posts/:id
 Headers : no
 Body: no
 
 Response: 
-- Array con el author eliminado
-
-##############################
-##         API Posts        ##
-##############################
+- Array con el Posts eliminado

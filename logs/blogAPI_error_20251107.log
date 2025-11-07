@@ -18,3 +18,11 @@
 2025-11-07 12:01:21 [error] TypeError: AuthorModel.delete is not a function
     at deleteById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\authors.controller.js:75:40)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 16:07:17 [error] El id : 258 no localizado
+2025-11-07 16:07:25 [error] El id : 8 no localizado
+2025-11-07 16:07:30 [error] El id : 9 no localizado
+2025-11-07 16:21:46 [error] AutorModel.getById error: %s
+2025-11-07 16:21:46 [error] ReferenceError: rows is not defined
+    at AuthorModel.getById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\author.model.js:17:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async checkAuthorId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\authors.middlewares.js:13:20)

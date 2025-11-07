@@ -46,3 +46,77 @@
 2025-11-07 12:02:27 [info] Conexión a la base de datos MySQL exitosa!
 2025-11-07 12:03:54 [info] Server listening on port 3000
 2025-11-07 12:03:54 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:25:50 [info] Server listening on port 3000
+2025-11-07 12:25:50 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:27:16 [info] Server listening on port 3000
+2025-11-07 12:27:16 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:27:34 [info] Server listening on port 3000
+2025-11-07 12:27:34 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:30:08 [info] Server listening on port 3000
+2025-11-07 12:30:08 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:30:39 [info] Server listening on port 3000
+2025-11-07 12:30:39 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:34:29 [info] Server listening on port 3000
+2025-11-07 12:34:29 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:34:54 [info] Server listening on port 3000
+2025-11-07 12:34:54 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:36:32 [info] Server listening on port 3000
+2025-11-07 12:36:32 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 12:37:39 [info] Server listening on port 3000
+2025-11-07 12:37:39 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:17:46 [info] Server listening on port 3000
+2025-11-07 13:17:46 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:21:12 [info] Server listening on port 3000
+2025-11-07 13:21:12 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:24:21 [info] Server listening on port 3000
+2025-11-07 13:24:21 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:24:55 [info] Server listening on port 3000
+2025-11-07 13:24:55 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:26:25 [info] Server listening on port 3000
+2025-11-07 13:26:25 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:30:15 [info] Server listening on port 3000
+2025-11-07 13:30:15 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:30:44 [info] Server listening on port 3000
+2025-11-07 13:30:44 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:31:05 [info] Server listening on port 3000
+2025-11-07 13:31:05 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:31:43 [info] Server listening on port 3000
+2025-11-07 13:31:43 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:32:10 [info] Server listening on port 3000
+2025-11-07 13:32:10 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:32:27 [info] Server listening on port 3000
+2025-11-07 13:32:28 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:32:57 [info] Server listening on port 3000
+2025-11-07 13:32:57 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:34:28 [info] Server listening on port 3000
+2025-11-07 13:34:28 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 13:35:09 [info] Server listening on port 3000
+2025-11-07 13:35:09 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:06:47 [info] Server listening on port 3000
+2025-11-07 16:06:47 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:07:17 [error] El id : 258 no localizado
+2025-11-07 16:07:25 [error] El id : 8 no localizado
+2025-11-07 16:07:30 [error] El id : 9 no localizado
+2025-11-07 16:09:41 [info] Server listening on port 3000
+2025-11-07 16:09:41 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:11:13 [info] Server listening on port 3000
+2025-11-07 16:11:13 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:16:02 [info] Server listening on port 3000
+2025-11-07 16:16:02 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:19:00 [info] Server listening on port 3000
+2025-11-07 16:19:00 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:21:13 [info] Server listening on port 3000
+2025-11-07 16:21:13 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:21:27 [info] Server listening on port 3000
+2025-11-07 16:21:27 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:21:46 [error] AutorModel.getById error: %s
+2025-11-07 16:21:46 [error] ReferenceError: rows is not defined
+    at AuthorModel.getById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\author.model.js:17:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async checkAuthorId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\authors.middlewares.js:13:20)
+2025-11-07 16:22:25 [info] Server listening on port 3000
+2025-11-07 16:22:25 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:23:06 [info] Server listening on port 3000
+2025-11-07 16:23:06 [info] Conexión a la base de datos MySQL exitosa!
+2025-11-07 16:26:42 [info] Server listening on port 3000
+2025-11-07 16:26:42 [info] Conexión a la base de datos MySQL exitosa!

@@ -3,10 +3,21 @@
 GET {{URL}}/authors
 
 ###
-GET {{URL}}/authors?page=1&perPage=2
+GET {{URL}}/authors?page=1&perPage=1
 
 ###
-GET {{URL}}/authors/258
+GET {{URL}}/authors/4
+
+{
+  "data": [
+    {
+      "id": 9,
+      "nombre": "Lluis",
+      "email": "lalsina883@gmail.com",
+      "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
+    }
+  ]
+}
 
 ###
 POST {{URL}}/authors
@@ -19,14 +30,14 @@ Content-Type: application/json
 }
 
 ###
-PUT {{URL}}/authors/258
+PUT {{URL}}/authors/11
 Content-Type: application/json
 
 {
-    "nombre": "Lluis",
-    "email": "lalsina883@gmail.com",
+    "nombre": "Lluis2",
+    "email": "lalsina883@gmail.com2",
     "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
 }
 
 ###
-DELETE {{URL}}/authors/8
+DELETE {{URL}}/authors/11

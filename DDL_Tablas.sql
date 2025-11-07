@@ -1,3 +1,7 @@
+CREATE SCHEMA practica08;
+
+USE practica08;
+
 CREATE TABLE autores ( 
     id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
     nombre VARCHAR(100) NOT NULL, 

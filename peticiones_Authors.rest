@@ -10,7 +10,7 @@ GET {{URL}}/authors?page=1&perPage=2
 
 # getById
 ###
-GET {{URL}}/authors/34
+GET {{URL}}/authors/5
 
 # create
 ###
@@ -25,15 +25,15 @@ Content-Type: application/json
 
 # updateById
 ###
-PUT {{URL}}/authors/34
+PUT {{URL}}/authors/5
 Content-Type: application/json
 
 {
-    "nombre": "Lluis5   ",
+    "nombre": "Lluis6   ",
     "email": "lalsina883@gmail.com",
     "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
 }
 
 # deleteById
 ###
-DELETE {{URL}}/authors/34
+DELETE {{URL}}/authors/5

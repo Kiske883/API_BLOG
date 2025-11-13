@@ -53,7 +53,7 @@ class AuthorModel extends BaseModel {
     } catch (error) {
 
       if (error.code === 'ER_DUP_ENTRY') {
-        logger.warn(`Intento de actualizar con un email duplicado: ${email}`);        
+        logger.warn(`Intento de actualizar con un email duplicado: ${email}`);
         throw new Error('El email ya está registrado por otro autor.');
       }
       logger.error('AutorModel.update error: %s', error.message);

@@ -44,9 +44,9 @@ function validateEmail(fieldName) {
 
 function existsEmail(fieldName, myId = '') {
   return async (req, res, next) => {
-    
+
     // Con esto consigo el id que voy a actualizar
-    const id = req.params[myId] ;
+    const id = req.params[myId];
 
     if (!req.body) {
       return res.status(400).json({ error: 'No hay datos en el body' });
@@ -84,7 +84,7 @@ const checkAuthorId = async (req, res, next) => {
 // pues nunca sobra por si fuera necesaria más adelante
 function isJsonValid(req, res, next) {
   try {
-    
+
     const contentType = req.headers['content-type'];
     if (!contentType || !contentType.includes('application/json')) {
       logger.warn(`Petición con Content-Type inválido: ${contentType || 'no especificado'}`);

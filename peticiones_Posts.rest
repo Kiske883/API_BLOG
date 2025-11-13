@@ -10,7 +10,7 @@ GET {{URL}}/posts?page=2&perPage=2
 
 # getById
 ###
-GET {{URL}}/posts/31
+GET {{URL}}/posts/9
 
 # getAllPostsByAuthor
 ###
@@ -34,7 +34,7 @@ Content-Type: application/json
 
 # updateById
 ###
-PUT {{URL}}/posts/31
+PUT {{URL}}/posts/9
 Content-Type: application/json
 
   {
@@ -46,4 +46,4 @@ Content-Type: application/json
 
 # deleteById
 ###
-DELETE {{URL}}/posts/31
+DELETE {{URL}}/posts/9

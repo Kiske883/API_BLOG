@@ -11,7 +11,7 @@ Body: no
 Response: 
 - Array con todos lo Authors 
 
-## Creación de un cliente
+## Creación de un author
 Metodo : POST
 URL : /api/authors
 Headers : no
@@ -48,5 +48,5 @@ Response:
 - Array con el author eliminado
 
 ##############################
-##         API Posts        ##
+##         API Authors      ##
 ##############################

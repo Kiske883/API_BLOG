@@ -36,13 +36,41 @@ class BaseModel {
 
   }
 
+  async getByEmail(email, fieldName, id = null) {
+
+    try {
+      let query = `SELECT * FROM \`${this.table}\` WHERE ${fieldName} = ?`;
+      const params = [email];
+
+      // Este condicional distingue si estamos en un UPDATE o en un CREATE.
+      // Si se proporciona un 'id', significa que estamos actualizando un registro existente,
+      // así que la consulta buscará si el email ya existe en otro autor (excluyendo el actual).
+      // Si no hay 'id', significa que estamos creando un nuevo autor,
+      // y la consulta comprobará simplemente si el email ya existe en la tabla.
+      if (id !== null && id !== undefined) {
+        query += ` AND id <> ?`;
+        params.push(id);
+      }
+
+      const [rows] = await pool.query(query, params);
+      return rows[0];
+
+    } catch (error) {
+      logger.error(`Error en getByEmail: ${error.message}`);
+      throw error;
+    }
+
+  }
+
   async getPaginated({ page = 1, perPage = 10, orderBy = null, whereSql = '', params = [] } = {}) {
 
     const limit = Number(perPage);
     const offset = (Number(page) - 1) * limit;
     const total = await this.getCount(whereSql, params);
 
-    let sqlQuery = `SELECT * FROM \`${this.table}\` ${whereSql}`;
+    let sqlQuery = `SELECT * FROM ${this.table} origin`;
+
+    sqlQuery += `${whereSql}`;
 
     if (orderBy) sqlQuery += ` ORDER BY ${orderBy}`;
 
@@ -57,6 +85,20 @@ class BaseModel {
     };
 
   }
+
+  async deleteById(id) {
+
+    try {
+
+      const [result] = await pool.query(`DELETE FROM \`${this.table}\` WHERE id = ?`, [id]);
+      return result.affectedRows > 0;
+
+    } catch (error) {
+      logger.error('BaseModel.deleteById error: %s', error.message);
+      throw error;
+    }
+  }
+
 }
 
 module.exports = BaseModel;

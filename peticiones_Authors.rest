@@ -1,24 +1,18 @@
 @URL = http://localhost:3000/api
 
+# getAll
+###
 GET {{URL}}/authors
 
+# getAll ( Paginated )
 ###
-GET {{URL}}/authors?page=1&perPage=1
+GET {{URL}}/authors?page=1&perPage=2
 
+# getById
 ###
 GET {{URL}}/authors/4
 
-{
-  "data": [
-    {
-      "id": 9,
-      "nombre": "Lluis",
-      "email": "lalsina883@gmail.com",
-      "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
-    }
-  ]
-}
-
+# create
 ###
 POST {{URL}}/authors
 Content-Type: application/json
@@ -29,15 +23,17 @@ Content-Type: application/json
     "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
 }
 
+# updateById
 ###
-PUT {{URL}}/authors/11
+PUT {{URL}}/authors/32
 Content-Type: application/json
 
 {
-    "nombre": "Lluis2",
-    "email": "lalsina883@gmail.com2",
+    "nombre": "Lluis5   ",
+    "email": "lalsina883@gmail.com",
     "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
 }
 
+# deleteById
 ###
-DELETE {{URL}}/authors/11
+DELETE {{URL}}/authors/32

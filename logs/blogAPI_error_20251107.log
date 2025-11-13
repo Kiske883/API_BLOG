@@ -28,3 +28,114 @@
     at async checkAuthorId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\authors.middlewares.js:13:20)
 2025-11-07 16:27:09 [error] El id : 258 no localizado
 2025-11-07 16:27:15 [error] El id : lluis no es numérico
+2025-11-07 16:48:40 [error] TypeError: PostModel.getById is not a function
+    at checkPostId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\posts.middlewares.js:13:34)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at next (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:117:3)
+    at handle (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:295:15
+    at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:600:14)
+    at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:610:14)
+    at processParams (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:664:3)
+2025-11-07 16:48:46 [error] TypeError: PostModel.getById is not a function
+    at checkPostId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\posts.middlewares.js:13:34)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at next (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:117:3)
+    at handle (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:295:15
+    at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:600:14)
+    at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:610:14)
+    at processParams (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:664:3)
+2025-11-07 16:55:15 [error] TypeError: PostModel.getById is not a function
+    at checkPostId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\posts.middlewares.js:13:34)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at next (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:117:3)
+    at handle (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:295:15
+    at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:600:14)
+    at param (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:610:14)
+    at processParams (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\index.js:664:3)
+2025-11-07 16:57:15 [error] getByIdWithAuthor error: %s
+2025-11-07 16:57:15 [error] ReferenceError: r is not defined
+    at PostModel.getByIdWithAuthor (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:67:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async checkPostId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\posts.middlewares.js:13:18)
+2025-11-07 17:30:37 [error] PostModel.create error: %s
+2025-11-07 17:30:37 [error] Error: Unknown column 'categoria' in 'field list'
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:91:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:31:40 [error] PostModel.create error: %s
+2025-11-07 17:31:40 [error] Error: Column 'categoria_id' cannot be null
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:91:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:33:23 [error] PostModel.create error: %s
+2025-11-07 17:33:23 [error] Error: Column 'categoria_id' cannot be null
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:97:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:34:27 [error] PostModel.create error: %s
+2025-11-07 17:34:27 [error] Error: Field 'imagen' doesn't have a default value
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:97:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:71:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:38:18 [error] PostModel.create error: %s
+2025-11-07 17:38:18 [error] Field 'imagen' doesn't have a default value
+2025-11-07 17:38:18 [error] Error: Field 'imagen' doesn't have a default value
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:97:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:42:03 [error] err is not defined
+2025-11-07 17:42:03 [error] ReferenceError: err is not defined
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:106:50)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:20)
+2025-11-07 17:44:04 [error] PostModel.create error: %s
+2025-11-07 17:44:04 [error] Field 'imagen' doesn't have a default value
+2025-11-07 17:44:04 [error] Error: Field 'imagen' doesn't have a default value
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:97:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:46:09 [error] PostModel.create error: %s
+2025-11-07 17:46:09 [error] Field 'imagen' doesn't have a default value
+2025-11-07 17:46:09 [error] Error: Field 'imagen' doesn't have a default value
+    at PromisePool.query (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at PostModel.create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\models\post.model.js:92:35)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:69:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:49:10 [error] Not found: PUT http://localhost:3000/api/posts/2
+2025-11-07 17:56:16 [error] Cannot read properties of undefined (reading 'postId')
+2025-11-07 17:56:16 [error] next is not a function
+2025-11-07 17:56:16 [error] TypeError: next is not a function
+    at getById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:56:5)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:70:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 17:57:58 [error] Cannot read properties of undefined (reading 'postId')
+2025-11-07 17:57:58 [error] next is not a function
+2025-11-07 17:57:58 [error] TypeError: next is not a function
+    at getById (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:56:5)
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:70:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 18:03:45 [error] Not found: PUT http://localhost:3000/api/posts/2
+2025-11-07 18:03:59 [error] Cannot destructure property 'titulo' of 'req.body' as it is undefined.
+2025-11-07 18:03:59 [error] TypeError: Cannot destructure property 'titulo' of 'req.body' as it is undefined.
+    at create (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\controllers\posts.controller.js:65:13)
+    at Layer.handleRequest (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\layer.js:152:17)
+    at next (D:\cursos\UNIR\Modulo5\proyectos\Practica08\node_modules\router\lib\route.js:157:13)
+    at checkPostId (D:\cursos\UNIR\Modulo5\proyectos\Practica08\src\middlewares\posts.middlewares.js:18:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-07 18:05:24 [error] Not found: PUT http://localhost:3000/api/posts/15
+2025-11-07 18:17:36 [error] El id : 12 no localizado

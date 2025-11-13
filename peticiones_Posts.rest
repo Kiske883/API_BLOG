@@ -1,32 +1,49 @@
 @URL = http://localhost:3000/api
 
-GET {{URL}}/authors
-
+# getAll
 ###
-GET {{URL}}/authors?page=1&perPage=2
+GET {{URL}}/posts
 
+# getAll ( Paginated )
 ###
-GET {{URL}}/authors/258
+GET {{URL}}/posts?page=2&perPage=2
 
+# getById
 ###
-POST {{URL}}/authors
+GET {{URL}}/posts/25
+
+# getAllPostsByAuthor
+###
+GET {{URL}}/posts/author/2
+
+# getAllPostsByAuthor ( Paginated )
+###
+GET {{URL}}/posts/author/2?page=1&perPage=3
+
+# create
+###
+POST {{URL}}/posts
 Content-Type: application/json
 
-{
-    "nombre": "Lluis",
-    "email": "lalsina883@gmail.com",
-    "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
-}
+  {
+    "titulo": "Como acabar los controles del API",
+    "descripcion": "Estrategias para no abandonar tu entrenamiento.",
+    "categoria_id": 3,
+    "autor_id": 4
+  }
 
+# updateById
 ###
-PUT {{URL}}/authors/258
+PUT {{URL}}/posts/30
 Content-Type: application/json
 
-{
-    "nombre": "Lluis",
-    "email": "lalsina883@gmail.com",
-    "imagen": "https://randomuser.me/api/portraits/men/2.jpg"
-}
+  {
+    "titulo": "Como acabar los controles del API de una vez",
+    "descripcion": "Estrategias para no abandonar tu entrenamiento.",
+    "categoria_id": 2,
+    "autor_id": 4
+  }
 
+# deleteById
 ###
-DELETE {{URL}}/authors/8
+DELETE {{URL}}/posts/28

@@ -8,26 +8,40 @@ class PostModel extends BaseModel {
     super('posts');
   }
 
-  async getAllWithAuthor({ limit, offset, orderBy } = {}) {
+  async getAllWithAuthor({ page = 1, perPage = 10, orderBy = null, whereSql = '', params = [] } = {}) {
 
-    let sqlQuery = `SELECT p.id, p.titulo, p.descripcion, p.created_at, p.categoria, p.autor_id,
-                           a.nombre as autor_nombre, a.email as autor_email, a.imagen as autor_imagen
+    const limit = Number(perPage);
+    const offset = (Number(page) - 1) * limit;
+    const total = await this.getCount(whereSql, params);
+
+    let sqlQuery = `SELECT 
+                            p.id, 
+                            p.titulo, 
+                            p.descripcion, 
+                            p.created_at, 
+                            p.categoria_id, 
+                            c.descripcion AS categoria, 
+                            p.autor_id,
+                            a.nombre AS autor_nombre, 
+                            a.email AS autor_email, 
+                            a.imagen AS autor_imagen
                     FROM posts p
-                    LEFT JOIN autores a ON p.autor_id = a.id`;
+                    LEFT JOIN categorias c ON p.categoria_id = c.id
+                    LEFT JOIN autores a ON p.autor_id = a.id `;
 
     if (orderBy) sqlQuery += ` ORDER BY ${orderBy}`;
 
     if (limit) sqlQuery += ` LIMIT ?${offset ? ' OFFSET ?' : ''}`;
 
     try {
-      const params = [];
+      // const params = [];
 
       if (limit) params.push(Number(limit));
       if (limit && offset) params.push(Number(offset));
 
       const [rows] = await pool.query(sqlQuery, params);
 
-      return rows.map(r => ({
+      const formatted = rows.map(r => ({
         id: r.id,
         titulo: r.titulo,
         descripcion: r.descripcion,
@@ -41,18 +55,31 @@ class PostModel extends BaseModel {
         }
       }));
 
-    } catch (err) {
-      logger.error('getAllWithAuthor error: %s', err.message);
-      throw err;
+      return {
+        data: formatted,
+        meta: { total, page: Number(page), perPage: Number(perPage), totalPages: Math.ceil(total / perPage) }
+      };
+
+    } catch (error) {
+      logger.error('getAllWithAuthor error: %s', error.message);
+      throw error;
     }
   }
 
   async getByIdWithAuthor(postId) {
 
-    const sqlQuery = `SELECT p.id, p.titulo, p.descripcion, p.created_at, p.categoria, p.autor_id,
-                            a.nombre as autor_nombre, a.email as autor_email, a.imagen as autor_imagen
+    const sqlQuery = `SELECT  p.id, 
+                              p.titulo, 
+                              p.descripcion, 
+                              p.created_at, 
+                              c.descripcion as categoria, 
+                              p.autor_id,
+                              a.nombre as autor_nombre, 
+                              a.email as autor_email, 
+                              a.imagen as autor_imagen
                       FROM posts p
                       LEFT JOIN autores a ON p.autor_id = a.id
+                      LEFT JOIN categorias c ON p.categoria_id = c.id
                       WHERE p.id = ?`;
 
     try {
@@ -63,16 +90,16 @@ class PostModel extends BaseModel {
       if (!result) return null;
 
       return {
-        id: r.id,
-        titulo: r.titulo,
-        descripcion: r.descripcion,
-        created_at: r.created_at,
-        categoria: r.categoria,
+        id: result.id,
+        titulo: result.titulo,
+        descripcion: result.descripcion,
+        created_at: result.created_at,
+        categoria: result.categoria,
         autor: {
-          id: r.autor_id,
-          nombre: r.autor_nombre,
-          email: r.autor_email,
-          imagen: r.autor_imagen
+          id: result.autor_id,
+          nombre: result.autor_nombre,
+          email: result.autor_email,
+          imagen: result.autor_imagen
         }
       };
 
@@ -83,21 +110,6 @@ class PostModel extends BaseModel {
     }
   }
 
-  async create({ titulo, descripcion, categoria, autor_id }) {
-    try {
-      const [result] = await pool.query(
-        'INSERT INTO posts (titulo, descripcion, categoria, autor_id) VALUES (?, ?, ?, ?)',
-        [titulo, descripcion, categoria, autor_id]
-      );
-
-      return { id: result.insertId, titulo, descripcion, categoria, autor_id };
-
-    } catch (err) {
-      logger.error('PostModel.create error: %s', err.message);
-      throw err;
-    }
-  }
-
   async getByAuthor(authorId, { page = 1, perPage = 10 } = {}) {
 
     const whereSql = 'WHERE p.autor_id = ?';
@@ -105,23 +117,28 @@ class PostModel extends BaseModel {
     const params = [authorId];
     const limit = Number(perPage);
     const offset = (Number(page) - 1) * limit;
-    
+
     try {
 
       const [countRows] = await pool.query(countSql, params);
       const total = countRows[0].total || 0;
 
-      const sql = `SELECT p.id, p.titulo, p.descripcion, p.created_at, p.categoria
+      const sql = `SELECT p.id, 
+                          p.titulo, 
+                          p.descripcion, 
+                          p.created_at, 
+                          c.descripcion as categoria
                    FROM posts p
+                   inner join categorias c on ( c.id = p.categoria_id )
                    ${whereSql}
                    ORDER BY p.created_at DESC
                    LIMIT ? OFFSET ?`;
-                   
+
       const allParams = [...params, limit, offset];
-      const [rows] = await pool.query(sql, allParams);
+      const [result] = await pool.query(sql, allParams);
 
       return {
-        data: rows,
+        data: result,
         meta: {
           total,
           page: Number(page),
@@ -130,8 +147,47 @@ class PostModel extends BaseModel {
         }
       };
 
+    } catch (error) {
+      logger.error('PostModel.getByAuthor error: %s', error.message);
+      throw error;
+    }
+  }
+
+  async create({ titulo, descripcion, categoria_id, autor_id }) {
+
+    try {
+      const [result] = await pool.query(
+        ` INSERT INTO posts (  titulo,
+                               descripcion, 
+                               categoria_id, 
+                               autor_id ) 
+          VALUES ( TRIM(?), TRIM(?), ?, ?) `,
+        [titulo, descripcion, categoria_id, autor_id]
+      );
+
+      return { id: result.insertId, titulo, descripcion, categoria_id, autor_id };
+
+    } catch (error) {
+      logger.error('PostModel.create error: %s', error.message);
+      throw error;
+    }
+  }
+
+  async updateById(id, { titulo, descripcion, categoria_id, autor_id }) {
+
+    try {
+
+      const [result] = await pool.query(
+        'UPDATE posts SET titulo = TRIM(?), ' +
+        '                 descripcion = TRIM(?), ' +
+        '                 categoria_id = ? , ' +
+        '                 autor_id = ? ' +
+        'WHERE id = ?', [titulo, descripcion, categoria_id, autor_id, id]);
+
+      return result;
+
     } catch (err) {
-      logger.error('PostModel.getByAuthor error: %s', err.message);
+      logger.error('AutorModel.update error: %s', err.message);
       throw err;
     }
   }

@@ -310,12 +310,25 @@ const getPostsByAuthor = async (req, res, next) => {
 
     if (!autor) return res.status(404).json({ message: 'Autor no encontrado' });
 
-    const result = await PostModel.getByAuthor(authorId, { page, perPage });
+    const posts = await PostModel.getByAuthor(authorId, { page, perPage });
+
+    const result = {
+      data: {
+        posts: posts.data,
+        autor: {
+          id: autor.id,
+          nombre: autor.nombre,
+          email: autor.email,
+          imagen: autor.imagen
+        }
+      },
+      meta: posts.meta 
+    };
 
     res.json(result);
 
-  } catch (err) {
-    next(err);
+  } catch (error) {
+    next(error);
   }
 };
 

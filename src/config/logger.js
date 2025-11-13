@@ -22,7 +22,7 @@ const logger = createLogger({
     new DailyRotateFile({
       filename: path.join(logDir, 'blogAPI_total_%DATE%.log'),
       datePattern: 'YYYYMMDD',
-      maxFiles: '14d', // conserva logs de los últimos 14 días
+      maxFiles: '14d', 
       level: 'info',
       zippedArchive: false,
       auditFile: path.join(logDir, `${APP_NAME}-audit.json`)

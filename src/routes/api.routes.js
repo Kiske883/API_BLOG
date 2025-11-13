@@ -5,9 +5,6 @@ const pool = require('../config/db');
 const apiAuthorsRoutes = require('./authors.routes');
 const apiPostsRoutes = require('./posts.routes');
 
-// const router = Router();
-
-// Endpoint de estado
 router.get('/status', async (req, res) => {
 
     let dbStatus = 'UNKNOWN';

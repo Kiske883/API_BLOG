@@ -19,7 +19,7 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:3000/api', 
+        url: 'http://localhost:3000/api',
       },
     ],
   },
@@ -53,8 +53,6 @@ app.use((error, req, res, next) => {
   next(err);
 });
 
-
-
 app.use(cors());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
@@ -62,19 +60,19 @@ app.use('/api', apiRoutes);
 
 // 404 handler
 app.use((req, res, next) => {
-    
-    const fullUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
-    logger.error(`Not found: ${req.method} ${fullUrl}`);
 
-    res.status(404).json({
-        message: "Not found"
-    });
+  const fullUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+  logger.error(`Not found: ${req.method} ${fullUrl}`);
+
+  res.status(404).json({
+    message: "Not found"
+  });
 });
 
 // Error handler
-app.use((err, req, res, next) => {    
-    logger.error(err.stack);
-    res.status(500).json({ message: err.message });
+app.use((err, req, res, next) => {
+  logger.error(err.stack);
+  res.status(500).json({ message: err.message });
 });
 
 module.exports = app;

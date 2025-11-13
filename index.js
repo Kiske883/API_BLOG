@@ -16,7 +16,7 @@ server.listen(PORT);
 
 // Listeners
 server.on("listening", async () => {
-    
+
     logger.info(`Server listening on port ${PORT}`);
 
     try {
@@ -28,7 +28,7 @@ server.on("listening", async () => {
     } catch (error) {
 
         logger.error('Error conectando a la base de datos:', error.message);
-    }    
+    }
 });
 
 server.on("error", (error) => {

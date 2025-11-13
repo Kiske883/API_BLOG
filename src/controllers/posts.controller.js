@@ -301,7 +301,7 @@ const getById = async (req, res, next) => {
  *                   example: "Internal Server Error"
  */
 const getPostsByAuthor = async (req, res, next) => {
-  
+
   try {
 
     const { authorId } = req.params;
@@ -322,7 +322,7 @@ const getPostsByAuthor = async (req, res, next) => {
           imagen: autor.imagen
         }
       },
-      meta: posts.meta 
+      meta: posts.meta
     };
 
     res.json(result);

@@ -6,6 +6,8 @@ const logger = require('../config/logger');
  * @swagger
  * /posts:
  *   get:
+ *     tags:
+ *       - Posts
  *     summary: Obtiene todos los posts con sus autores
  *     description: |
  *       Devuelve un listado paginado de posts junto con la información de sus autores.
@@ -108,6 +110,8 @@ const getAll = async (req, res, next) => {
  * @swagger
  * /posts/{postId}:
  *   get:
+ *     tags:
+ *       - Posts
  *     summary: Obtiene un post por su ID
  *     description: |
  *       Devuelve un post específico junto con la información de su autor.
@@ -197,8 +201,10 @@ const getById = async (req, res, next) => {
 
 /**
  * @swagger
- * /authors/{authorId}/posts:
+ * /posts/authors/{authorId}:
  *   get:
+ *     tags:
+ *       - Posts
  *     summary: Obtiene los posts de un autor específico
  *     description: |
  *       Devuelve un listado paginado de posts de un autor específico.
@@ -317,6 +323,8 @@ const getPostsByAuthor = async (req, res, next) => {
  * @swagger
  * /posts:
  *   post:
+ *     tags:
+ *       - Posts
  *     summary: Crea un nuevo post
  *     description: |
  *       Crea un nuevo post y lo asocia a un autor existente.
@@ -436,6 +444,8 @@ const create = async (req, res, next) => {
  * @swagger
  * /posts/{postId}:
  *   put:
+ *     tags:
+ *       - Posts
  *     summary: Actualiza un post existente
  *     description: |
  *       Actualiza los datos de un post específico y devuelve el post actualizado junto con su autor.
@@ -557,6 +567,8 @@ const updateById = async (req, res, next) => {
  * @swagger
  * /posts/{postId}:
  *   delete:
+ *     tags:
+ *       - Posts
  *     summary: Elimina un post existente
  *     description: |
  *       Elimina un post específico y devuelve la información del post eliminado.

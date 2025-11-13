@@ -13,24 +13,22 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'API Authors',
+      title: 'API Practica08',
       version: '1.0.0',
-      description: 'Documentación de la API de autores',
+      description: 'Documentación de la API de Practica08 ',
     },
     servers: [
       {
-        url: 'http://localhost:3000/api', // tu URL base
+        url: 'http://localhost:3000/api', 
       },
     ],
   },
-  apis: ['./src/controllers/*.js'], // Ruta donde están tus controladores
+  apis: ['./src/controllers/*.js'],
 };
 
 const swaggerSpec = swaggerJsdoc(options);
 
 const app = express();
-
-// app.use(express.json());
 
 app.use(express.json({
   verify: (req, res, buf, encoding) => {

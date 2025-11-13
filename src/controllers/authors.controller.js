@@ -5,6 +5,8 @@ const logger = require('../config/logger');
  * @swagger
  * /authors:
  *   get:
+ *     tags:
+ *       - Authors
  *     summary: Obtiene la lista de todos los autores paginada
  *     description: Devuelve un listado de autores con paginación, ordenado por id descendente.
  *     parameters:
@@ -64,6 +66,8 @@ const getAll = async (req, res, next) => {
  * @swagger
  * /authors/{authorId}:
  *   get:
+ *     tags:
+ *       - Authors
  *     summary: Obtiene un autor por su ID
  *     description: |
  *       Devuelve los datos de un autor específico.
@@ -147,6 +151,8 @@ const getById = async (req, res, next) => {
  * @swagger
  * /authors:
  *   post:
+ *     tags:
+ *       - Authors
  *     summary: Crea un nuevo autor
  *     description: |
  *       Crea un autor en la base de datos.
@@ -242,6 +248,8 @@ const create = async (req, res, next) => {
  * @swagger
  * /authors/{authorId}:
  *   put:
+ *     tags:
+ *       - Authors
  *     summary: Actualiza un autor existente
  *     description: |
  *       Actualiza los datos de un autor específico.
@@ -348,6 +356,8 @@ const updateById = async (req, res, next) => {
  * @swagger
  * /authors/{authorId}:
  *   delete:
+ *     tags:
+ *       - Authors
  *     summary: Elimina un autor existente
  *     description: |
  *       Elimina un autor específico de la base de datos.

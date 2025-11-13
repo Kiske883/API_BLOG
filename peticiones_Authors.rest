@@ -10,7 +10,7 @@ GET {{URL}}/authors?page=1&perPage=2
 
 # getById
 ###
-GET {{URL}}/authors/4
+GET {{URL}}/authors/34
 
 # create
 ###
@@ -25,7 +25,7 @@ Content-Type: application/json
 
 # updateById
 ###
-PUT {{URL}}/authors/32
+PUT {{URL}}/authors/34
 Content-Type: application/json
 
 {
@@ -36,4 +36,4 @@ Content-Type: application/json
 
 # deleteById
 ###
-DELETE {{URL}}/authors/32
+DELETE {{URL}}/authors/34
